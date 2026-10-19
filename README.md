@@ -111,48 +111,49 @@ macOS 工作流构建 Universal 应用，同时包含 Apple Silicon 和 Intel �
 
 ## v0.3 验证
 
-见 `VALIDATION-v0.3.md`。Windows 真实本地 SSH / SFTP / 跳板转发及隔离命名管道 Agent 签名测试已通过；界面测试使用模拟 Tauri IPC，不能替代真实服务器验证。macOS Universal 构建配置仍保留，尚未进行 macOS 编译及实机验收。
+见 `docs/validation/VALIDATION-v0.3.md`。Windows 真实本地 SSH / SFTP / 跳板转发及隔离命名管道 Agent 签名测试已通过；界面测试使用模拟 Tauri IPC，不能替代真实服务器验证。macOS Universal 构建配置仍保留，尚未进行 macOS 编译及实机验收。
 
 ## v0.3.1 验证
 
-见 `VALIDATION-v0.3.1.md`。本地真实 SSH 多轮认证及两侧 OTP 跳板连接通过；界面回归通过。尚未连接用户实际堡垒机，也未进行 macOS 实机验证。
+见 `docs/validation/VALIDATION-v0.3.1.md`。本地真实 SSH 多轮认证及两侧 OTP 跳板连接通过；界面回归通过。尚未连接用户实际堡垒机，也未进行 macOS 实机验证。
 
 ## v0.3.2 验证
 
-见 `VALIDATION-v0.3.2.md`。18 项 Rust 测试、13 项配置 / 导入测试、界面操作回归通过；包含两侧加密私钥真实 SSH、错误提示与最新配置重连。
+见 `docs/validation/VALIDATION-v0.3.2.md`。18 项 Rust 测试、13 项配置 / 导入测试、界面操作回归通过；包含两侧加密私钥真实 SSH、错误提示与最新配置重连。
 
 ## v0.4.0 验证
 
-见 `VALIDATION-v0.4.0.md`。19 项 TypeScript 配置 / 工作空间测试、19 项 Rust 测试通过，工作空间与原有连接界面回归通过。macOS 构建脚本经过 shell 语法和模拟流程验证，但 Windows 无法完成 macOS 编译或实机验收；未运行 GitHub Actions。
+见 `docs/validation/VALIDATION-v0.4.0.md`。19 项 TypeScript 配置 / 工作空间测试、19 项 Rust 测试通过，工作空间与原有连接界面回归通过。macOS 构建脚本经过 shell 语法和模拟流程验证，但 Windows 无法完成 macOS 编译或实机验收；未运行 GitHub Actions。
 
 ## v0.4.1 验证
 
-终端不足一行的底部空隙跟随深浅主题；去除 xterm 6 旧滚动层多余的原生滚动条，保留实际历史滚动。验证记录见 `VALIDATION-v0.4.1.md`；Windows 程序为 `output/windows/TerminalWorkbench-v0.4.1.exe`。
+终端不足一行的底部空隙跟随深浅主题；去除 xterm 6 旧滚动层多余的原生滚动条，保留实际历史滚动。验证记录见 `docs/validation/VALIDATION-v0.4.1.md`；Windows 程序为 `output/windows/TerminalWorkbench-v0.4.1.exe`。
 
 ## v0.5.0 验证
 
-见 `VALIDATION-v0.5.0.md`。22 项前端测试、25 项 Rust 测试通过，包含 SFTP 文本编辑、备份、冲突、失败 / 取消清理，以及经本地真实 SSH 跳板通道编辑后继续终端交互。用户实际服务器和 macOS 实机仍待验收。Windows 程序：`output/windows/TerminalWorkbench-v0.5.0.exe`。
+见 `docs/validation/VALIDATION-v0.5.0.md`。22 项前端测试、25 项 Rust 测试通过，包含 SFTP 文本编辑、备份、冲突、失败 / 取消清理，以及经本地真实 SSH 跳板通道编辑后继续终端交互。用户实际服务器和 macOS 实机仍待验收。Windows 程序：`output/windows/TerminalWorkbench-v0.5.0.exe`。
 
 ## v0.6.0 验证
 
-30 项前端测试、26 项 Rust 测试及四宫格 / 连接 / 工作空间 / 远程编辑 / 终端背景界面验证通过。新增面板顺序、两个比例、活动标签和待连接恢复验证。见 `VALIDATION-v0.6.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.6.0.exe`。
+30 项前端测试、26 项 Rust 测试及四宫格 / 连接 / 工作空间 / 远程编辑 / 终端背景界面验证通过。新增面板顺序、两个比例、活动标签和待连接恢复验证。见 `docs/validation/VALIDATION-v0.6.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.6.0.exe`。
 
 ## v0.7.0 验证
 
-36 项前端测试、27 项 Rust 测试及批量传输 / 连接 / 工作空间 / 编辑 / 四宫格 / 终端背景界面验证通过。覆盖串行调度、跨会话绑定、失败继续、取消等待及运行任务、取消清理和批量下载原子拒绝覆盖。见 `VALIDATION-v0.7.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.7.0.exe`。
+36 项前端测试、27 项 Rust 测试及批量传输 / 连接 / 工作空间 / 编辑 / 四宫格 / 终端背景界面验证通过。覆盖串行调度、跨会话绑定、失败继续、取消等待及运行任务、取消清理和批量下载原子拒绝覆盖。见 `docs/validation/VALIDATION-v0.7.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.7.0.exe`。
 
 ## v0.8.0 验证
 
-42 项前端测试、33 项 Rust 测试及下载续传 / 队列 / 连接 / 工作空间 / 编辑 / 四宫格 / 终端背景界面验证通过。详见 `VALIDATION-v0.8.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.8.0.exe`。macOS 和用户实际服务器仍待验收。
+42 项前端测试、33 项 Rust 测试及下载续传 / 队列 / 连接 / 工作空间 / 编辑 / 四宫格 / 终端背景界面验证通过。详见 `docs/validation/VALIDATION-v0.8.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.8.0.exe`。macOS 和用户实际服务器仍待验收。
 
 ## v0.9.0 验证
 
-46 项前端测试、42 项 Rust 测试及上传 / 下载续传、队列、连接、工作空间、编辑、四宫格、终端背景 8 组界面验证通过。详见 `VALIDATION-v0.9.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.9.0.exe`。macOS 与用户实际堡垒机仍待验收。
+46 项前端测试、42 项 Rust 测试及上传 / 下载续传、队列、连接、工作空间、编辑、四宫格、终端背景 8 组界面验证通过。详见 `docs/validation/VALIDATION-v0.9.0.md`；Windows 程序：`output/windows/TerminalWorkbench-v0.9.0.exe`。macOS 与用户实际堡垒机仍待验收。
 
 ## v0.9.1 界面精简
 
-移除应用内部重复的图标 / 名称 / 版本标题行，保留系统原生标题栏，工作区增加 48px 高度。连接数量位于底部状态栏，版本号在设置中查看。生产构建、深浅主题 / 窄窗口检查、终端背景 / 分屏 / 四宫格回归通过。详见 `VALIDATION-v0.9.1.md`。
+移除应用内部重复的图标 / 名称 / 版本标题行，保留系统原生标题栏，工作区增加 48px 高度。连接数量位于底部状态栏，版本号在设置中查看。生产构建、深浅主题 / 窄窗口检查、终端背景 / 分屏 / 四宫格回归通过。详见 `docs/validation/VALIDATION-v0.9.1.md`。
 
 ## v0.9.2 正式命名
 
-产品名统一为 ChwellTerm，窗口与浏览器标题、设置版本、Windows 独立程序 / 安装包、macOS 应用 / ZIP 和 CI 产物同步更新。配置与系统凭据标识保持兼容。对齐 Tauri 前端 API / 对话框插件与既有 Rust 库的小版本，使官方打包器能够完成版本检查。验证见 `VALIDATION-v0.9.2.md`。
+产品名统一为 ChwellTerm，窗口与浏览器标题、设置版本、Windows 独立程序 / 安装包、macOS 应用 / ZIP 和 CI 产物同步更新。配置与系统凭据标识保持兼容。对齐 Tauri 前端 API / 对话框插件与既有 Rust 库的小版本，使官方打包器能够完成版本检查。验证见 `docs/validation/VALIDATION-v0.9.2.md`。
+

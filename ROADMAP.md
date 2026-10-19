@@ -4,7 +4,7 @@
 
 - 正式采用 ChwellTerm；同步系统窗口标题、设置页、浏览器标题、Windows 和 macOS 构建产物名称。
 - 沿用旧版应用数据与凭据标识，保持会话、工作空间和主机指纹兼容。历史版本及验证记录保留原名。
-- 程序：`output/windows/ChwellTerm-v0.9.2.exe`；验证：`VALIDATION-v0.9.2.md`。
+- 程序：`output/windows/ChwellTerm-v0.9.2.exe`；验证：`docs/validation/VALIDATION-v0.9.2.md`。
 
 ## v0.1 · 已验收
 
@@ -26,7 +26,7 @@
 - 每标签本次连接诊断、可复制阶段记录、连接取消，错误区分跳板与目标。
 - v1 配置兼容，密码与口令不进入配置，v0.2 程序与源码保留在 output/releases/v0.2/。
 
-验证记录见 `VALIDATION-v0.3.md`，程序在 `output/windows/TerminalWorkbench-v0.3.exe`。本阶段支持单跳和普通公钥 Agent；多跳、Agent 转发、证书认证和 Pageant 留待后续。macOS 代码已按 Unix Agent 接口接入，仍待编译及实机验收。
+验证记录见 `docs/validation/VALIDATION-v0.3.md`，程序在 `output/windows/TerminalWorkbench-v0.3.exe`。本阶段支持单跳和普通公钥 Agent；多跳、Agent 转发、证书认证和 Pageant 留待后续。macOS 代码已按 Unix Agent 接口接入，仍待编译及实机验收。
 
 ## v0.3.1 · 交互式认证补充
 
@@ -36,7 +36,7 @@
 - 回答不保存到配置、凭据或日志；请求绑定标签与唯一 ID，取消 / 超时 / 断开清理。
 - OpenSSH 独立 keyboard-interactive 导入；旧版本配置兼容。
 
-验证记录见 `VALIDATION-v0.3.1.md`。程序：`output/windows/TerminalWorkbench-v0.3.1.exe`。待用户实际堡垒机试连验收。
+验证记录见 `docs/validation/VALIDATION-v0.3.1.md`。程序：`output/windows/TerminalWorkbench-v0.3.1.exe`。待用户实际堡垒机试连验收。
 
 ## v0.3.2 · 认证配置修复
 
@@ -45,7 +45,7 @@
 - 断开状态增加“编辑连接”；保存新认证设置后原标签重连使用新配置。
 - 说明直接堡垒机登录与 TCP 跳板转发的区别，账号 / 密码 + OTP 选择交互式认证。
 
-程序：`output/windows/TerminalWorkbench-v0.3.2.exe`，验证记录：`VALIDATION-v0.3.2.md`。
+程序：`output/windows/TerminalWorkbench-v0.3.2.exe`，验证记录：`docs/validation/VALIDATION-v0.3.2.md`。
 
 ## v0.4.0 · 工作空间首批已交付
 
@@ -56,7 +56,7 @@
 - 配置导入 / 导出包含命名工作空间，兼容旧 v1 配置；恢复不包含凭据、终端记录、广播状态或远端进程。
 - macOS 本地 Universal 构建 / 产物架构校验脚本、CI 流程与实机验收说明已准备，尚未在 Mac 执行。
 
-程序：`output/windows/TerminalWorkbench-v0.4.0.exe`；验证：`VALIDATION-v0.4.0.md`；Mac 构建：`MACOS.md`。
+程序：`output/windows/TerminalWorkbench-v0.4.0.exe`；验证：`docs/validation/VALIDATION-v0.4.0.md`；Mac 构建：`MACOS.md`。
 
 ## v0.4.1 · 终端背景修复
 
@@ -64,7 +64,7 @@
 - 去除旧滚动层重复的原生滚动条，保留终端实际历史滚动；创建终端时即应用当前主题。
 - 深浅主题、三种窗口尺寸、左右 / 上下分屏和历史滚动验证通过，连接 / 工作空间界面回归通过。
 
-程序：`output/windows/TerminalWorkbench-v0.4.1.exe`；验证：`VALIDATION-v0.4.1.md`。
+程序：`output/windows/TerminalWorkbench-v0.4.1.exe`；验证：`docs/validation/VALIDATION-v0.4.1.md`。
 
 ## v0.5.0 · 远程文本编辑已实现
 
@@ -74,7 +74,7 @@
 - 关闭 / 重新读取提示未保存草稿；断开时保留内容以供复制；其他会话的指纹 / 认证弹窗不销毁草稿。
 - 使用已认证连接按需打开独立 SFTP 编辑通道，支持已有单跳链路。1 MiB 上限，UTF-8 普通文件，服务器需支持安全替换扩展；具体边界见 README。
 
-程序：`output/windows/TerminalWorkbench-v0.5.0.exe`；验证：`VALIDATION-v0.5.0.md`。
+程序：`output/windows/TerminalWorkbench-v0.5.0.exe`；验证：`docs/validation/VALIDATION-v0.5.0.md`。
 
 ## v0.6.0 · 多面板首批已交付
 
@@ -84,7 +84,7 @@
 - 工作空间保存面板顺序、当前标签及两个比例，恢复后保持待连接状态。旧配置兼容，新字段通过前后端验证，导入 / 导出保留。
 - 窄窗口纵向排列且支持滚动，保留面板顺序；关闭终端后补入其他标签，不足 2 个回到单终端。
 
-程序：`output/windows/TerminalWorkbench-v0.6.0.exe`；验证：`VALIDATION-v0.6.0.md`。
+程序：`output/windows/TerminalWorkbench-v0.6.0.exe`；验证：`docs/validation/VALIDATION-v0.6.0.md`。
 
 ## v0.7.0 · 批量传输队列已交付
 
@@ -94,7 +94,7 @@
 - 批量下载遇同名本地文件拒绝覆盖，下载期间新出现的文件也保留；非法本地文件名提示单独另存为。上传同名拒绝覆盖及取消清理保留。
 - 队列不写入配置或工作空间；退出清空，断开后的任务不会在重连时自动恢复。
 
-程序：`output/windows/TerminalWorkbench-v0.7.0.exe`；验证：`VALIDATION-v0.7.0.md`。
+程序：`output/windows/TerminalWorkbench-v0.7.0.exe`；验证：`docs/validation/VALIDATION-v0.7.0.md`。
 
 ## v0.8.0 · 下载断点续传首批已交付
 
@@ -105,7 +105,7 @@
 - 界面区分校验、暂停、保存断点和中断状态，清除已结束不会丢弃暂停项；速度按本轮新增字节计算。
 - 不保存跨应用运行的断点；完整性校验增加网络读取与磁盘开销，当前仅普通文件。
 
-程序：`output/windows/TerminalWorkbench-v0.8.0.exe`；验证：`VALIDATION-v0.8.0.md`。
+程序：`output/windows/TerminalWorkbench-v0.8.0.exe`；验证：`docs/validation/VALIDATION-v0.8.0.md`。
 
 ## v0.9.0 · 上传暂停与续传已交付
 
@@ -115,13 +115,13 @@
 - 取消核对并删除临时文件；断网 / 删除失败时保留路径和断点以供重试。关闭标签先等待清理，失败则保留原标签与处理入口。
 - 深浅主题、窄窗口及原功能回归通过；不保存跨应用运行的断点，退出可能留下远端临时文件。
 
-程序：`output/windows/TerminalWorkbench-v0.9.0.exe`；验证：`VALIDATION-v0.9.0.md`。
+程序：`output/windows/TerminalWorkbench-v0.9.0.exe`；验证：`docs/validation/VALIDATION-v0.9.0.md`。
 
 ## v0.9.1 · 顶部界面精简
 
 移除重复品牌标题行，工作区增加 48px；连接数量移至底部状态栏，版本号移至设置。保留原生窗口标题栏与系统窗口操作。
 
-程序：`output/windows/TerminalWorkbench-v0.9.1.exe`；验证：`VALIDATION-v0.9.1.md`。
+程序：`output/windows/TerminalWorkbench-v0.9.1.exe`；验证：`docs/validation/VALIDATION-v0.9.1.md`。
 
 ## 后续 · 尚未开发
 
@@ -144,7 +144,7 @@ Windows 安装包与升级、macOS Intel/Apple Silicon 实机验证、签名和�
 4. 切换会话时传输状态仍可见，取消只影响对应传输；关闭源终端会取消关联任务。
 5. 两个终端可调整比例；上下/左右布局均同步终端尺寸；单终端不出现分隔条。
 
-验证记录见 `VALIDATION-v0.2.md`。验收程序：`output/windows/TerminalWorkbench-v0.2.exe`。
+验证记录见 `docs/validation/VALIDATION-v0.2.md`。验收程序：`output/windows/TerminalWorkbench-v0.2.exe`。
 
 ## v0.3 验收项目
 
@@ -153,3 +153,4 @@ Windows 安装包与升级、macOS Intel/Apple Silicon 实机验证、签名和�
 3. 经跳板使用交互终端和 SFTP；拒绝任一指纹或认证失败均停止连接。
 4. OpenSSH ProxyJump 别名可导入，多跳及未支持代理不会静默变成直连；JSON 导出不含两侧凭据。
 5. 查看连接诊断、复制记录，取消连接或重新连接后状态正确；已有 v0.1/v0.2 会话继续加载。
+
