@@ -35,7 +35,15 @@ pnpm desktop:build --bundles app,dmg --target universal-apple-darwin
 bundle_root='src-tauri/target/universal-apple-darwin/release/bundle'
 app_path="$bundle_root/macos/ChwellTerm.app"
 app_binary="$app_path/Contents/MacOS/chwellterm"
-lipo -verify_arch arm64 x86_64 "$app_binary"
+architectures="$(lipo -archs "$app_binary")"
+if [[ " $architectures " != *" arm64 "* ]]; then
+  printf 'Universal app is missing arm64 architecture: %s\n' "$architectures" >&2
+  exit 1
+fi
+if [[ " $architectures " != *" x86_64 "* ]]; then
+  printf 'Universal app is missing x86_64 architecture: %s\n' "$architectures" >&2
+  exit 1
+fi
 version="$(node -p 'JSON.parse(require("node:fs").readFileSync("package.json", "utf8")).version')"
 artifact_dir="output/macos/v$version"
 mkdir -p "$artifact_dir"
