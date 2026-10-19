@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="tile" x1="100" y1="32" x2="410" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#343E4D"/>
+      <stop offset="0.5" stop-color="#202936"/>
+      <stop offset="1" stop-color="#121923"/>
+    </linearGradient>
+    <linearGradient id="prompt" x1="144" y1="165" x2="245" y2="352" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A2F8DB"/>
+      <stop offset="0.5" stop-color="#67E0B8"/>
+      <stop offset="1" stop-color="#37BE98"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="80" y1="40" x2="420" y2="476" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8CEDF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#B8CEDF" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#tile)"/>
+  <rect x="34" y="34" width="444" height="444" rx="102" stroke="url(#edge)" stroke-width="4"/>
+  <path d="m146 174 88 88-88 88" stroke="#080F18" stroke-opacity="0.3" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m146 166 88 88-88 88" stroke="url(#prompt)" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 330h72" stroke="#E7F3F5" stroke-width="42" stroke-linecap="round"/>
+</svg>

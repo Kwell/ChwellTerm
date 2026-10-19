@@ -1,0 +1,1 @@
+{"main-window":{"identifier":"main-window","description":"Local main window access to terminal and file dialogs","local":true,"windows":["main"],"permissions":["core:default","core:window:allow-set-theme","dialog:allow-open","dialog:allow-save"]}}

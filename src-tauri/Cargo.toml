@@ -1,0 +1,49 @@
+[package]
+name = "terminal-workbench"
+version = "0.9.2"
+description = "ChwellTerm cross-platform SSH terminal"
+edition = "2021"
+
+[lib]
+name = "terminal_workbench_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "chwellterm"
+path = "src/main.rs"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-util = "0.7"
+russh = { version = "0.63.0", default-features = false, features = ["ring", "rsa"] }
+russh-sftp = "2"
+portable-pty = "0.9"
+base64 = "0.22"
+uuid = { version = "1", features = ["v4"] }
+parking_lot = "0.12"
+tempfile = "3"
+zeroize = "1"
+sha2 = "0.10"
+
+[dev-dependencies]
+rand = "0.10"
+futures = "0.3"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+keyring = { version = "3.6.3", features = ["windows-native"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+keyring = { version = "3.6.3", features = ["apple-native"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+keyring = { version = "3.6.3", features = ["sync-secret-service", "crypto-rust"] }

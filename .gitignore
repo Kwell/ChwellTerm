@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.tools/
+src-tauri/target/
+*.log
+*.tsbuildinfo
+artifacts/
+output/
